@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>jmaree — table of contents</title>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@300;400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --paper: #F2EEE9;
+    --ink: #1E1711;
+    --ink-soft: #5C5148;
+    --ink-faint: #A8998C;
+    --accent: #8B5E3C;
+    --content-max: 600px;
+  }
+
+  html { background: var(--paper); }
+
+  body {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    color: var(--ink);
+    background: var(--paper);
+    min-height: 100vh;
+  }
+
+  /* ── NAV ── */
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 2rem 3rem 1.5rem;
+    border-bottom: 1px solid rgba(28,26,24,0.1);
+  }
+
+  .nav-wordmark {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 300;
+    font-size: 1.35rem;
+    letter-spacing: 0.02em;
+    color: var(--ink);
+    text-decoration: none;
+  }
+
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+
+  .nav-links a {
+    font-family: 'Jost', sans-serif;
+    font-weight: 300;
+    font-size: 0.7rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    text-decoration: none;
+  }
+
+  .nav-links a:hover { color: var(--ink); }
+
+  /* ── TOC PAGE ── */
+  .toc-page {
+    max-width: var(--content-max);
+    margin: 0 auto;
+    padding: 6rem 2rem 8rem;
+  }
+
+  .toc-heading {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 400;
+    font-size: 1.55rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--ink);
+    margin-bottom: 2rem;
+  }
+
+  .toc-rule {
+    width: 100%;
+    height: 2px;
+    background: var(--ink);
+    opacity: 0.85;
+    margin-bottom: 4rem;
+  }
+
+  /* ── CHAPTER (MONTH) BLOCKS ── */
+  .chapter { margin-bottom: 3.6rem; }
+  .chapter:last-of-type { margin-bottom: 0; }
+
+  .chapter-label {
+    font-family: 'Jost', sans-serif;
+    font-size: 0.62rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 0.4rem;
+  }
+
+  .chapter-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 1.7rem;
+    color: var(--ink);
+    margin-bottom: 1.8rem;
+    letter-spacing: 0.01em;
+  }
+
+  /* ── ENTRY LINES ── */
+  .toc-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .toc-line {
+    display: flex;
+    align-items: baseline;
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.2s ease;
+  }
+
+  .toc-line:hover { opacity: 0.6; }
+
+  .toc-line .label {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+    font-size: 1.12rem;
+    color: var(--ink);
+  }
+
+  .toc-line .leader {
+    flex: 1;
+    border-bottom: 1.5px dotted var(--ink-faint);
+    margin: 0 0.6rem;
+    transform: translateY(-0.3rem);
+  }
+
+  .toc-line .num {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 1.1rem;
+    color: var(--ink);
+    min-width: 1.2rem;
+    text-align: right;
+  }
+
+  /* end-of-book sections, no day number */
+  .toc-extra { margin-top: 1rem; }
+  .toc-extra .toc-line .num { color: transparent; }
+
+  footer {
+    text-align: center;
+    padding: 3rem;
+    border-top: 1px solid rgba(28,26,24,0.1);
+  }
+
+  footer p {
+    font-family: 'Caveat', cursive;
+    font-size: 0.9rem;
+    color: var(--ink-faint);
+  }
+
+  @media (max-width: 600px) {
+    nav { padding: 1.5rem; }
+    .toc-page { padding: 4rem 1.5rem 6rem; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="index-toc-v2.html" class="nav-wordmark">jmaree</a>
+  <ul class="nav-links">
+    <li><a href="index-toc-v2.html">diary</a></li>
+    <li><a href="#">photos</a></li>
+    <li><a href="about-author.html">the author</a></li>
+    <li><a href="https://serenitybyjmaree.com">serenity ↗</a></li>
+  </ul>
+</nav>
+
+<div class="toc-page">
+
+  <h1 class="toc-heading">Table of Contents</h1>
+  <div class="toc-rule"></div>
+
+  <!-- ═══ CHAPTER: JUNE ═══ -->
+  <div class="chapter">
+    <p class="chapter-label">chapter two</p>
+    <h2 class="chapter-title">June</h2>
+
+    <div class="toc-list">
+      <a href="entry.html" class="toc-line">
+        <span class="label">This is JMaree.com</span>
+        <span class="leader"></span>
+        <span class="num">15</span>
+      </a>
+      <a href="entry.html" class="toc-line">
+        <span class="label">Somewhere Between Here and There</span>
+        <span class="leader"></span>
+        <span class="num">14</span>
+      </a>
+      <a href="entry.html" class="toc-line">
+        <span class="label">The Mat Is the Most Honest Place I Know</span>
+        <span class="leader"></span>
+        <span class="num">8</span>
+      </a>
+      <a href="entry.html" class="toc-line">
+        <span class="label">Rest Is Not Absence</span>
+        <span class="leader"></span>
+        <span class="num">3</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ═══ CHAPTER: MAY ═══ -->
+  <div class="chapter">
+    <p class="chapter-label">chapter one</p>
+    <h2 class="chapter-title">May</h2>
+
+    <div class="toc-list">
+      <a href="entry.html" class="toc-line">
+        <span class="label">Linen, Always</span>
+        <span class="leader"></span>
+        <span class="num">29</span>
+      </a>
+      <a href="entry.html" class="toc-line">
+        <span class="label">This Is the Work</span>
+        <span class="leader"></span>
+        <span class="num">22</span>
+      </a>
+    </div>
+  </div>
+
+  <!-- ═══ END MATTER ═══ -->
+  <div class="toc-extra">
+    <div class="toc-list">
+      <a href="about-author.html" class="toc-line">
+        <span class="label">About the Author</span>
+        <span class="leader"></span>
+        <span class="num">·</span>
+      </a>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <p>jmaree.com · written as it happens · <a href="https://serenitybyjmaree.com" style="color:inherit;">serenity ↗</a></p>
+</footer>
+
+</body>
+</html>
